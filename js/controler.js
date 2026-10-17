@@ -1,17 +1,29 @@
 window.onload = cargareventos;
 
 function cargareventos() {
-    // Escuchar el evento submit del formulario de registro
-    var formRegistro = document.getElementById('registerForm');
-    if (formRegistro) {
-        formRegistro.addEventListener("submit", agregarUsuario, false);
-    }
+    // Eventos para envio de formularios
+    document.getElementById('registerForm').addEventListener("submit", agregarUsuario, false);
+    document.getElementById('loginForm').addEventListener("submit", autenticarUsuario, false);
 
-    // Escuchar el evento submit del formulario de inicio de sesión
-    var formLogin = document.getElementById('loginForm');
-    if (formLogin) {
-        formLogin.addEventListener("submit", autenticarUsuario, false);
-    }
+    // Eventos para cambiar de pestaña entre Registro e Iniciar Sesión
+    document.getElementById('tabRegisterBtn').addEventListener("click", mostrarRegistro, false);
+    document.getElementById('tabLoginBtn').addEventListener("click", mostrarLogin, false);
+}
+
+function mostrarRegistro() {
+    document.getElementById('registerForm').classList.add('active');
+    document.getElementById('loginForm').classList.remove('active');
+    document.getElementById('tabRegisterBtn').classList.add('active');
+    document.getElementById('tabLoginBtn').classList.remove('active');
+    document.getElementById('topTitle').textContent = "Registrarse";
+}
+
+function mostrarLogin() {
+    document.getElementById('loginForm').classList.add('active');
+    document.getElementById('registerForm').classList.remove('active');
+    document.getElementById('tabLoginBtn').classList.add('active');
+    document.getElementById('tabRegisterBtn').classList.remove('active');
+    document.getElementById('topTitle').textContent = "Iniciar Sesión";
 }
 
 function agregarUsuario(event) {
@@ -19,9 +31,9 @@ function agregarUsuario(event) {
     var formularioAgregar = document.getElementById('registerForm');
     var datos = new FormData(formularioAgregar);
 
-    alert("Usuario registrado: " + datos.get('fullname') + 
-          "\nMatrícula: " + datos.get('regnumber') + 
+    alert("usuario registrado: " + datos.get('fullname') + 
           "\nEmail: " + datos.get('email') + 
+          "\nMatrícula: " + datos.get('regnumber') + 
           "\nCarrera: " + datos.get('career'));
 }
 
@@ -31,6 +43,6 @@ function autenticarUsuario(event) {
     var datos = new FormData(formularioAutentificar);
     var password = datos.get('loginPassword') || '';
 
-    alert("Usuario intentando entrar: " + datos.get('loginUser') + 
-          "\nCon una contraseña que tiene " + password.length + " caracteres.");
+    alert("usuario intentando entrar: " + datos.get('loginUser') + 
+          "\ncon una contraseña que tiene " + password.length + " caracteres.");
 }
