@@ -9,20 +9,26 @@
 </head>
 <body>
 
-    <!-- Encabezado superior azul que se difumina a negro -->
+    
+    <a href="index.html" class="btn-regresar">
+        <span class="icono-flecha">&#8592;</span>
+        <span>Regresar al Inicio</span>
+    </a>
+
+    
     <header class="top-header">
         <h1 id="topTitle">Registrarse</h1>
     </header>
 
     <div class="container">
         
-        <!-- Botones transparentes (solo texto) -->
+        
         <div class="tabs-container">
             <button type="button" class="tab-btn active" id="tabRegisterBtn">Registrarse</button>
             <button type="button" class="tab-btn" id="tabLoginBtn">Iniciar Sesión</button>
         </div>
 
-        <!-- FORMULARIO 1: REGISTRO -->
+        
         <form id="registerForm" class="form-section active">
             <div class="input-group">
                 <label for="fullname">Nombre Completo</label>
@@ -54,7 +60,7 @@
             <button type="submit" class="btn-submit">Registrar</button>
         </form>
 
-        <!-- FORMULARIO 2: INICIO DE SESIÓN -->
+        
         <form id="loginForm" class="form-section">
             <div class="input-group">
                 <label for="loginUser">Correo o Número de Registro</label>
@@ -71,7 +77,7 @@
 
     </div>
 
-    <!-- Archivo Controlador único dentro de la carpeta js -->
-    <script src="js/controller.js"></script>
+    
+    <script src="js/controler.js"></script>
 </body>
 </html>

@@ -34,90 +34,101 @@
       </p>
     </section>
 
+    <!-- Contenedor con distribución continua de tarjetas -->
     <div class="content-grid">
 
-      <div class="columna-izquierda">
-        <section class="card">
-          <div class="card-header">
-            <h3>Descripción General del Portal</h3>
-            <span class="badge">CETI OFICIAL</span>
+      <section class="card">
+        <div class="card-header">
+          <h3>Descripción General del Portal</h3>
+          <span class="badge">CETI OFICIAL</span>
+        </div>
+        <div class="card-body">
+          <p>
+            En esta página podrás ver la información necesaria para tu estancia en la preparatoria y tener una buena experiencia en el CETI Plantel Tonalá.
+          </p>
+          <p class="texto-secundario">
+            El sistema te permite consultar boletines, oferta académica y avisos importantes sobre la infraestructura y servicios del plantel.
+          </p>
+        </div>
+      </section>
+
+      <!-- MÓDULO DE USUARIOS EN LÍNEA -->
+      <section class="card">
+        <div class="card-header-btn">
+          <button class="btn-seccion" type="button">Usuarios en Línea (SITI)</button>
+        </div>
+        <div class="card-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Conectados actualmente:</span>
+            <span id="counterOnline" style="font-weight: 700; color: #38bdf8; font-family: 'Share Tech Mono', monospace;">0</span>
           </div>
-          <div class="card-body">
+          
+          <ul id="onlineList" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header-btn">
+          <button class="btn-seccion" type="button">Noticias Plantel Tonalá</button>
+        </div>
+        <div class="card-body gap-16">
+
+          <article class="noticia-item">
+            <div class="noticia-meta">
+              <span class="fecha">12/09/2026</span>
+            </div>
+            <h4>Mantenimiento en Laboratorios de Desarrollo</h4>
             <p>
-              En esta página podrás ver la información necesaria para tu estancia en la preparatoria y tener una buena experiencia en el CETI Plantel Tonalá.
+              Los equipos del Edificio de Cómputo entrarán en revisión programada este fin de semana.
             </p>
-            <p class="texto-secundario">
-              El sistema te permite consultar boletines, oferta académica y avisos importantes sobre la infraestructura y servicios del plantel.
+          </article>
+
+          <article class="noticia-item">
+            <div class="noticia-meta">
+              <span class="fecha">10/09/2026</span>
+            </div>
+            <h4>Actualización de Credenciales Digitales</h4>
+            <p>
+              Acude a Control Escolar si detectas problemas al registrar tus accesos en la red del plantel.
             </p>
-          </div>
-        </section>
-      </div>
+          </article>
 
-      <div class="columna-derecha">
+        </div>
+      </section>
 
-        <section class="card">
-          <div class="card-header-btn">
-            <button class="btn-seccion" type="button">Noticias Plantel Tonalá</button>
-          </div>
-          <div class="card-body gap-16">
+      <section class="card">
+        <div class="card-header-btn">
+          <button class="btn-seccion" type="button">Carreras Técnicas</button>
+        </div>
+        <div class="card-body">
+          <p class="descripcion-seccion">
+            Las carreras de nivel Tecnólogo en el CETI Plantel Tonalá están diseñadas para formar profesionales con habilidades prácticas y teóricas en Desarrollo de Software, Electrónica y Calidad. La capacitación técnica capacita a los estudiantes mediante talleres especializados y la resolución de problemas en la industria. Si prestas atención a las señales de la <span class="palabra-oculta">SUBRED</span> podrás comprender el funcionamiento interno del entorno escolar.
+          </p>
+        </div>
+      </section>
 
-            <article class="noticia-item">
-              <div class="noticia-meta">
-                <span class="fecha">12/09/2026</span>
-              </div>
-              <h4>Mantenimiento en Laboratorios de Desarrollo</h4>
-              <p>
-                Los equipos del Edificio de Cómputo entrarán en revisión programada este fin de semana.
-              </p>
-            </article>
+      <section class="card">
+        <div class="card-header-btn">
+          <button class="btn-seccion" type="button">Calendario Escolar</button>
+        </div>
+        <div class="card-body">
+          <p class="descripcion-seccion">
+            Consulta las fechas oficiales de evaluaciones parciales, suspensiones de labores, periodos de inscripción y entregas de proyectos integradores del semestre actual.
+          </p>
+        </div>
+      </section>
 
-            <article class="noticia-item">
-              <div class="noticia-meta">
-                <span class="fecha">10/09/2026</span>
-              </div>
-              <h4>Actualización de Credenciales Digitales</h4>
-              <p>
-                Acude a Control Escolar si detectas problemas al registrar tus accesos en la red del plantel.
-              </p>
-            </article>
-
-          </div>
-        </section>
-
-        <section class="card">
-          <div class="card-header-btn">
-            <button class="btn-seccion" type="button">Carreras Técnicas</button>
-          </div>
-          <div class="card-body">
-            <p class="descripcion-seccion">
-              Las carreras de nivel Tecnólogo en el CETI Plantel Tonalá están diseñadas para formar profesionales con habilidades prácticas y teóricas en Desarrollo de Software, Electrónica y Calidad. La capacitación técnica capacita a los estudiantes mediante talleres especializados y la resolución de problemas en la industria. Si prestas atención a las señales de la <span class="palabra-oculta">SUBRED</span> podrás comprender el funcionamiento interno del entorno escolar.
-            </p>
-          </div>
-        </section>
-
-        <section class="card">
-          <div class="card-header-btn">
-            <button class="btn-seccion" type="button">Calendario Escolar</button>
-          </div>
-          <div class="card-body">
-            <p class="descripcion-seccion">
-              Consulta las fechas oficiales de evaluaciones parciales, suspensiones de labores, periodos de inscripción y entregas de proyectos integradores del semestre actual.
-            </p>
-          </div>
-        </section>
-
-        <section class="card">
-          <div class="card-header-btn">
-            <button class="btn-seccion" type="button">Soporte Técnico SITI</button>
-          </div>
-          <div class="card-body">
-            <p class="descripcion-seccion">
-              Módulo de asistencia para estudiantes del plantel. Permite reportar fallas en las cuentas institucionales, solicitar restablecimiento de accesos a laboratorios y contactar con la administración de red del CETI Tonalá.
-            </p>
-          </div>
-        </section>
-
-      </div>
+      <section class="card">
+        <div class="card-header-btn">
+          <button class="btn-seccion" type="button">Soporte Técnico CETI</button>
+        </div>
+        <div class="card-body">
+          <p class="descripcion-seccion">
+            Módulo de asistencia para estudiantes del plantel. Permite reportar fallas en las cuentas institucionales, solicitar restablecimiento de accesos a laboratorios y contactar con la administración de red del CETI Tonalá.
+          </p>
+        </div>
+      </section>
 
     </div>
 
@@ -136,5 +147,6 @@
     </div>
   </footer>
 
+  <script src="js/status.js"></script>
 </body>
 </html>
