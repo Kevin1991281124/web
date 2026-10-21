@@ -32,9 +32,12 @@
       <p class="subtitulo-principal">
         Portal de Servicios Escolares e Información Oficial — CETI Plantel Tonalá.
       </p>
+
+      <div style="margin-top: 20px; display: flex; justify-content: center;">
+        <input type="text" id="moduleSearch" placeholder="Buscar módulos..." style="width: 100%; max-width: 450px; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border-color); background: rgba(15, 23, 42, 0.85); color: #ffffff; font-size: 0.9rem; outline: none;">
+      </div>
     </section>
 
-    <!-- Contenedor con distribución continua de tarjetas -->
     <div class="content-grid">
 
       <section class="card">
@@ -52,7 +55,6 @@
         </div>
       </section>
 
-      <!-- MÓDULO DE USUARIOS EN LÍNEA -->
       <section class="card">
         <div class="card-header-btn">
           <button class="btn-seccion" type="button">Usuarios en Línea (SITI)</button>
@@ -121,7 +123,7 @@
 
       <section class="card">
         <div class="card-header-btn">
-          <button class="btn-seccion" type="button">Soporte Técnico CETI</button>
+          <button class="btn-seccion" type="button">Soporte Técnico SITI</button>
         </div>
         <div class="card-body">
           <p class="descripcion-seccion">
@@ -148,5 +150,6 @@
   </footer>
 
   <script src="js/status.js"></script>
+  <script src="js/search.js"></script>
 </body>
 </html>
