@@ -109,8 +109,10 @@ function autenticarUsuario(event) {
 
     var hayError = false;
 
-    if (usuario === "") {
-        mostrarError('loginUser', 'err-loginUser', 'Por favor ingresa tu correo o matrícula.');
+    var regexSoloDigitos = /^\d{8}$/;
+
+    if (!regexSoloDigitos.test(usuario)) {
+        mostrarError('loginUser', 'err-loginUser', 'El usuario solo debe contener números y con 8 digitos.');
         hayError = true;
     }
 
